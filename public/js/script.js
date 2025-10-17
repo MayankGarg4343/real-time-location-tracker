@@ -21,7 +21,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution:"openstreetmap"
 }).addTo(map)
 
-const markers = {};
+const markers = {};// shows the location marks on the frontened.
 socket.on("receive-location",(data)=>{
     const {id, longitude, latitude} = data;
     map.setView([latitude, longitude]);
